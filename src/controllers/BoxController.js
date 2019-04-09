@@ -1,14 +1,14 @@
-import { create, findById } from '../models/Box';
+const Box = require('../models/Box');
 
 class BoxController{
     async store(req, res){
-        const box = await create({title: req.body.title});
+        const box = await Box.create({title: req.body.title});
         
         return res.send(box);
     }
 
     async show(req, res){
-        const box = await findById(req.params.id).populate({
+        const box = await Box.findById(req.params.id).populate({
             path: 'files',
             options: { sort: {createdAt: -1}},
         });
@@ -19,4 +19,4 @@ class BoxController{
     }
 }
 
-export default new BoxController();
+module.exports = new BoxController();
