@@ -4,7 +4,7 @@ const multerConfig = require('./config/multer');
 
 const routes = express.Router();
 
-const BoxController = require('./controllers/BoxController').default.default;
+const BoxController = require('./controllers/BoxController');
 const FileController = require('./controllers/FileController');
 
 routes.post('/boxes', BoxController.store);
