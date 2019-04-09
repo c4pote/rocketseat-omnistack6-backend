@@ -4,7 +4,7 @@ const multerConfig = require('./config/multer');
 
 const routes = express.Router();
 
-const BoxController = require('./controllers/BoxController');
+const BoxController = require('./controllers/BoxController').default.default;
 const FileController = require('./controllers/FileController');
 
 routes.post('/boxes', BoxController.store);
@@ -16,7 +16,7 @@ routes.post(
     FileController.store);
 
 routes.get('/', (req, res) =>{
-    return res.send('Backend Omni Stack Rocketseat');
+    return res.send('Serviço Ativo e Funcionando');
 });
 
 module.exports = routes;
