@@ -16,7 +16,7 @@ routes.post(
     FileController.store);
 
 routes.get('/', (req, res) =>{
-    return res.send('Serviço Ativo e Funcionando');
+    return res.send('Serviços Ativos e Funcionando');
 });
 
 module.exports = routes;
