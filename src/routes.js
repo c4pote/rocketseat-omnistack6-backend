@@ -16,7 +16,7 @@ routes.post(
     FileController.store);
 
 routes.get('/', (req, res) =>{
-    return res.send('Rodou Lindo')
+    return res.send('Backend Omni Stack Rocketseat');
 });
 
 module.exports = routes;
